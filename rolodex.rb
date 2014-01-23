@@ -60,12 +60,12 @@ class Rolodex
 		puts "\e[H\e[2J"
 		puts " "
 		puts "CONTACT LIST".center(85)
-		puts "-" * 80
+		puts "-" * 85
 		
 #  JUSTIFICATION TO BE FIXED!!!!!
 		@contacts.each{ |x| puts "ID: #{x.id} Name: #{x.first_name.ljust(10)} #{x.last_name.ljust(15)} Email: #{x.email.ljust(20)} Notes: #{x.notes.ljust(35)}"}
 		puts " "
-		puts "-" * 80
+		puts "-" * 85
 		puts " "
   end
 
