@@ -43,6 +43,7 @@ class Rolodex
   
 # WORKING
 	def delete_contact
+		puts "\e[H\e[2J"
 		display_contacts
 		puts "Please enter the id number of the contact you wish to delete:"
 		delete_id = gets.chomp.to_i
@@ -52,6 +53,7 @@ class Rolodex
         end
     end
        	puts "\e[H\e[2J"
+       	display_contacts
        	puts "Contact has been removed from database."
 	end
 
@@ -61,8 +63,6 @@ class Rolodex
 		puts " "
 		puts "CONTACT LIST".center(85)
 		puts "-" * 85
-		
-#  JUSTIFICATION TO BE FIXED!!!!!
 		@contacts.each{ |x| puts "ID: #{x.id} Name: #{x.first_name.ljust(10)} #{x.last_name.ljust(15)} Email: #{x.email.ljust(20)} Notes: #{x.notes.ljust(35)}"}
 		puts " "
 		puts "-" * 85
